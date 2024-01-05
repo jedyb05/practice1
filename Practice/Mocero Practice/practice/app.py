@@ -1,12 +1,15 @@
 from flask import Flask, render_template, request
-import pickle
 import numpy as np
+from sklearn.externals import joblib
 
 app = Flask(__name__)
 
-# Load the trained model
-model = pickle.load(open('model.pkl', 'rb'))
+# Assuming 'model' is your trained machine learning model
+# Replace 'model' with the actual variable name of your trained model
+model = ...
 
+# Save the trained model using joblib
+joblib.dump(model, 'model.pkl')
 
 # Route for the home page
 @app.route('/')
