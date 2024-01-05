@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .positive {
+            color: #4CAF50; /* Green */
+        }
+
+        .negative {
+            color: #FF5252; /* Red */
+        }
+    </style>
+</head>
+<body>
+    <h1>Diabetes Prediction Result</h1>
+    {% if prediction == 1 %}
+        <p class="positive">The individual has tested positive for Diabetes.</p>
+    {% else %}
+        <p class="negative">No evidence of Diabetes has been detected in the individual.</p>
+    {% endif %}
+</body>
+</html>
